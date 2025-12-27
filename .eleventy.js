@@ -9,7 +9,11 @@ module.exports = function(eleventyConfig) {
   /* --------------------------------------------------------------------------
   11ty plugins
   -------------------------------------------------------------------------- */
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(syntaxHighlight, {
+    preAttributes: {
+      "data-1p-ignore": ""
+    }
+  });
 
   /* --------------------------------------------------------------------------
   filters
